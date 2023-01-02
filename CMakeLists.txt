@@ -15,7 +15,7 @@ endif()
 project(nlohmann_json_schema_validator
         LANGUAGES CXX)
 
-set(PROJECT_VERSION 2.1.1)
+set(PROJECT_VERSION 2.2.0)
 
 if(JSON_VALIDATOR_HUNTER)
     hunter_add_package(nlohmann_json)
@@ -23,6 +23,7 @@ endif()
 
 # the library
 add_library(nlohmann_json_schema_validator
+    src/smtp-address-validator.cpp
     src/json-schema-draft7.json.cpp
     src/json-uri.cpp
     src/json-validator.cpp
@@ -41,7 +42,7 @@ target_compile_features(nlohmann_json_schema_validator
 set_target_properties(nlohmann_json_schema_validator
                       PROPERTIES
                           VERSION ${PROJECT_VERSION}
-                          SOVERSION 1)
+                          SOVERSION 2)
 
 # disable tests and examples if project is not super project
 if(CMAKE_SOURCE_DIR STREQUAL PROJECT_SOURCE_DIR)
