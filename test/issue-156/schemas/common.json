@@ -1,0 +1,6 @@
+{
+    "$id": "./common.json",
+    "definitions": {
+        "attr": { "type": "string" }
+    }
+}

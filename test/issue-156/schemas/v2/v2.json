@@ -1,0 +1,6 @@
+{
+    "$id": "v2.json",
+    "definitions": {
+        "msg": { "$ref": "./../v1/v1.json#/definitions/msg" }
+    }
+}
